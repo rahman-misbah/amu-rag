@@ -20,7 +20,7 @@ langchain-ollama==0.1.0
 sentence-transformers==2.2.2
 
 # Document Processing
-pypdf==3.17.1
+pdf2image>=1.17.0
 unstructured==0.10.30
 beautifulsoup4
 
