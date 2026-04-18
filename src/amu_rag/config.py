@@ -20,3 +20,13 @@ GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "2048"))
 # Validation
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY not found in .env file. Please set it to your Gemini API key.")
+
+# Data directory
+DATA_DIR = PROJECT_ROOT / "data"
+RAW_DATA_DIR = DATA_DIR / "raw"
+RAW_DATA_TEST_DIR = RAW_DATA_DIR / "test"
+
+# Create necessary directories if they don't exist
+for dir in [DATA_DIR, RAW_DATA_DIR, RAW_DATA_TEST_DIR]:
+    if not dir.exists():
+        dir.mkdir(parents=True, exist_ok=True)
