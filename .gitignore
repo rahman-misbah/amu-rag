@@ -1,0 +1,154 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.whl
+*.manifest
+*.spec
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+hackcera/
+.hackcera/
+
+# Conda
+*.pkl
+*.pkl.*
+conda-env/
+.conda/
+miniconda3/
+anaconda3/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.code-workspace
+.settings/
+*.sublime-*
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+*.ipynb_checkpoints
+
+# Project specific - Vector database
+chroma_data/
+chromadb/
+.chroma/
+*.chroma/
+vector_store/
+vectors/
+
+# Project specific - Documents (keep structure but ignore actual files)
+data/
+documents/
+*.pdf
+*.docx
+*.txt
+!requirements.txt
+!.gitignore
+!README.md
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.db
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# API keys and secrets
+secrets/
+keys/
+*.key
+*.pem
+*.crt
+credentials.json
+*.yaml
+!environment.yml
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.bak
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+*.cover
+.hypothesis/
+
+# Docker
+*.pid
+docker-compose.override.yml
+docker-compose.*.yml
+!docker-compose.yml
+
+# Ollama
+ollama_models/
+.ollama/
+
+# LangChain/LangSmith
+.langchain/
+langchain_debug/
+trace.json
+
+# Data science
+*.parquet
+*.feather
+*.arrow
+*.h5
+*.hdf5
+*.joblib
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.cache
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# Backup files
+*.backup
+*.old
+*.orig
