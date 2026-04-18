@@ -18,6 +18,9 @@ wheels/
 *.manifest
 *.spec
 
+# Experimentation
+sandbox.py
+
 # Virtual environments
 venv/
 env/
