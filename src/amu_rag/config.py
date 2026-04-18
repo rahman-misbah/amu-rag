@@ -33,6 +33,6 @@ RAW_DATA_TEXT_DIR = RAW_DATA_DIR / "text"
 PROCESSED_DATA_DIR = DATA_DIR / "processed"
 
 # Create necessary directories if they don't exist
-for dir in [DATA_DIR, RAW_DATA_DIR, RAW_DATA_TEST_DIR, RAW_DATA_IMAGE_DIR, RAW_DATA_TEXT_DIR, PROCESSED_DATA_DIR]:
+for dir in [DATA_DIR, RAW_DATA_DIR, RAW_DATA_IMAGE_DIR, RAW_DATA_TEXT_DIR, PROCESSED_DATA_DIR]:
     if not dir.exists():
         dir.mkdir(parents=True, exist_ok=True)
