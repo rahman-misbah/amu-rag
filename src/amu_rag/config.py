@@ -15,7 +15,7 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 GEMINI_TEMPERATURE = float(os.getenv("GEMINI_TEMPERATURE", "0.1"))
 GEMINI_TOP_P = float(os.getenv("GEMINI_TOP_P", "0.1"))
 GEMINI_TOP_K = int(os.getenv("GEMINI_TOP_K", "10"))
-GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "2048"))
+GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "8192"))
 
 # Validation
 if not GEMINI_API_KEY:
