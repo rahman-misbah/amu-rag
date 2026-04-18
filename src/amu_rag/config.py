@@ -26,7 +26,6 @@ DATA_DIR = PROJECT_ROOT / "data"
 
 # Raw data directories
 RAW_DATA_DIR = DATA_DIR / "raw"
-RAW_DATA_TEST_DIR = RAW_DATA_DIR / "test"
 RAW_DATA_IMAGE_DIR = RAW_DATA_DIR / "image"
 RAW_DATA_TEXT_DIR = RAW_DATA_DIR / "text"
 
