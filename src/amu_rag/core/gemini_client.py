@@ -11,12 +11,20 @@ _GEN_CONFIG = types.GenerateContentConfig(
 
 _client = genai.Client(api_key=GEMINI_API_KEY)
 
-def generate_content(prompt: str) -> str:
+def generate_content(prompt: tuple) -> str:
+    """Generates content using the Gemini API based on the provided prompt.
+    
+    Args:
+        prompt (tuple): A tuple containing the prompt elements to be sent to the Gemini API.
+        
+    Returns:
+        str: The generated content from the Gemini API.
+    """
     try:
         response = _client.models.generate_content(
             model=GEMINI_MODEL,
             config=_GEN_CONFIG,
-            contents=[prompt],
+            contents=[*prompt],
         )
         return response.text
     except Exception as e:
