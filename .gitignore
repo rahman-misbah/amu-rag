@@ -18,6 +18,9 @@ wheels/
 *.manifest
 *.spec
 
+# Experimentation
+sandbox.py
+
 # Virtual environments
 venv/
 env/
@@ -65,7 +68,6 @@ data/
 documents/
 *.pdf
 *.docx
-*.txt
 !requirements.txt
 !.gitignore
 !README.md
