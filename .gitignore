@@ -68,7 +68,6 @@ data/
 documents/
 *.pdf
 *.docx
-*.txt
 !requirements.txt
 !.gitignore
 !README.md
