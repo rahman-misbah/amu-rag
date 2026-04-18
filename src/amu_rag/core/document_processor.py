@@ -3,9 +3,9 @@ from datetime import datetime
 from pdf2image import convert_from_path
 from PIL import Image
 
-from ..config import RAW_DATA_IMAGE_DIR, RAW_DATA_TEXT_DIR, RAW_DATA_PDF_DIR, PROCESSED_DATA_DIR
-from ..prompts import TEXT_PROMPT, IMAGE_PROMPT
-from ..core.gemini_client import generate_content
+from .config import RAW_DATA_IMAGE_DIR, RAW_DATA_TEXT_DIR, RAW_DATA_PDF_DIR, PROCESSED_DATA_DIR
+from .prompts import TEXT_PROMPT, IMAGE_PROMPT
+from .core.gemini_client import generate_content
 
 class DocumentProcessor:
     """A class to process various types of documents and generate content using the Gemini API."""
