@@ -11,7 +11,7 @@ load_dotenv(PROJECT_ROOT / ".env")
 
 # Gemini Configuration
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 GEMINI_TEMPERATURE = float(os.getenv("GEMINI_TEMPERATURE", "0.3"))
 GEMINI_TOP_P = float(os.getenv("GEMINI_TOP_P", "0.3"))
 GEMINI_TOP_K = int(os.getenv("GEMINI_TOP_K", "20"))
