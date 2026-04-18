@@ -64,7 +64,6 @@ vector_store/
 vectors/
 
 # Project specific - Documents (keep structure but ignore actual files)
-data/
 documents/
 *.pdf
 *.docx
