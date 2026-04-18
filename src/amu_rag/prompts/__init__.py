@@ -19,3 +19,4 @@ def load_prompt(file_name: str) -> str:
         raise FileNotFoundError(f"Prompt file '{file_name}' not found in {PROMPTS_DIR}")
 
 IMAGE_PROMPT = load_prompt("image_prompt.txt")
+TEXT_PROMPT = load_prompt("text_prompt.txt")

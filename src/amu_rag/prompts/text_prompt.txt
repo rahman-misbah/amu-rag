@@ -1,0 +1,14 @@
+Analyze the following text related to Aligarh Muslim University. Your task is to categorize the information and synthesize it into a structured RAG-ready format.
+Your output must consist strictly of two sections: ---METADATA--- and ---SUMMARY---. Do not include markdown formatting, headers (other than the section markers), or conversational filler.
+---METADATA---
+Provide a single-line JSON object with these fields:
+
+    expires: boolean (true if the info has a shelf-life, false for permanent facts).
+    doc_type: string (one of: notice, policy, circular, event, background, announcement).
+    issue_date: string (YYYY-MM-DD or null).
+    effective_date: string (YYYY-MM-DD or null).
+    deadline: string (YYYY-MM-DD or null).
+    target_audience: array of strings (options: students, faculty, staff, public, administration).
+
+---SUMMARY---
+Write a detailed plain text summary in paragraph form. Convert all structural elements like lists or data tables into fluid prose. Ensure all factual data, historical references, contact details, or policy rules are captured accurately. For background information, ensure the description is educational and objective. For time-sensitive text, emphasize deadlines and specific procedures. Use English for the summary. If a specific date or field is not present in the text, set the corresponding metadata value to null.
