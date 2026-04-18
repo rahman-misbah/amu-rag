@@ -21,6 +21,9 @@ wheels/
 # Experimentation
 sandbox.py
 
+# Data files
+data/
+
 # Virtual environments
 venv/
 env/
@@ -64,7 +67,6 @@ vector_store/
 vectors/
 
 # Project specific - Documents (keep structure but ignore actual files)
-data/
 documents/
 *.pdf
 *.docx
