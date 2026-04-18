@@ -1,6 +1,7 @@
 """Configuration module for AMU RAG system. This module loads environment variables and sets up configuration parameters for the Gemini API and other components of the system."""
 
 import os
+
 from dotenv import load_dotenv
 from pathlib import Path
 
