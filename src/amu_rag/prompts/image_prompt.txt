@@ -1,0 +1,14 @@
+Analyze the provided image(s) as a single document from Aligarh Muslim University. If multiple images are provided, treat them as consecutive pages. Extract all text, including tables, stamps, and handwritten notes, regardless of image quality or lighting.
+Your output must consist strictly of two sections: ---METADATA--- and ---SUMMARY---. Do not include markdown formatting, bolding, or introductory filler text.
+---METADATA---
+Provide a single-line JSON object with these fields:
+
+    expires: boolean (true if time-sensitive, false if background context).
+    doc_type: string (one of: notice, policy, circular, event, background, announcement).
+    issue_date: string (YYYY-MM-DD or null).
+    effective_date: string (YYYY-MM-DD or null).
+    deadline: string (YYYY-MM-DD or null).
+    target_audience: array of strings (options: students, faculty, staff, public, administration).
+
+---SUMMARY---
+Write a comprehensive natural language summary in plain text paragraphs. Do not use bullet points; convert all lists and tables into descriptive prose. For notices, include the issuing authority, key dates, and specific required actions. For background context, focus on historical facts, policies, or organizational details. If the text is in Hindi or Urdu, translate the content into English while retaining official proper nouns. If information is missing, do not invent it.
