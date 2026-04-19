@@ -1,5 +1,5 @@
 """FastAPI application for RAG query interface."""
 
-from .app import app, ask_question
+from .app import app, handle_query
 
-__all__ = ["app", "ask_question"]
+__all__ = ["app", "handle_query"]
