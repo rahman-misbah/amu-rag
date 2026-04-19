@@ -18,6 +18,10 @@ GEMINI_TOP_P = float(os.getenv("GEMINI_TOP_P", "0.1"))
 GEMINI_TOP_K = int(os.getenv("GEMINI_TOP_K", "10"))
 GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "8192"))
 
+# Ollama Configuration
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2")
+
 # Validation
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY not found in .env file. Please set it to your Gemini API key.")
