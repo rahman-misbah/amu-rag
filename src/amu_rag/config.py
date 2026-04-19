@@ -21,6 +21,22 @@ GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "8192"))
 # Ollama Configuration
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2")
+OLLAMA_ROUTER_CONFIG = {
+    "temperature": 0.2,
+    "top_k": 20,
+    "top_p": 0.8,
+    "num_predict": 300,
+    "repeat_penalty": 1.1,
+    "seed": 42
+}
+OLLAMA_RAG_CONFIG = {
+    "temperature": 0.4,
+    "top_k": 40,
+    "top_p": 0.9,
+    "num_predict": 500,
+    "repeat_penalty": 1.15,
+    "stop": ["\n\n\n"]
+}
 
 # Validation
 if not GEMINI_API_KEY:

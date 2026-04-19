@@ -5,7 +5,7 @@ from PIL import Image
 
 from ..config import RAW_DATA_IMAGE_DIR, RAW_DATA_TEXT_DIR, RAW_DATA_PDF_DIR, PROCESSED_DATA_DIR
 from ..prompts import TEXT_PROMPT, IMAGE_PROMPT
-from ..clients import generate_content
+from ..clients import gemini_generate
 
 class DocumentProcessor:
     """A class to process various types of documents and generate content using the Gemini API."""
@@ -44,7 +44,7 @@ class DocumentProcessor:
 
         # Generate content using the Gemini API
         prompt = (TEXT_PROMPT, text)
-        response = generate_content(prompt)
+        response = gemini_generate(prompt)
         DocumentProcessor.__save_response(response)
 
     @staticmethod
@@ -65,7 +65,7 @@ class DocumentProcessor:
 
         # Generate content using the Gemini API
         prompt = (IMAGE_PROMPT, image)
-        response = generate_content(prompt)
+        response = gemini_generate(prompt)
         DocumentProcessor.__save_response(response)
 
     @staticmethod
@@ -83,7 +83,7 @@ class DocumentProcessor:
 
         # Generate content using the Gemini API
         prompt = (IMAGE_PROMPT,) + tuple(images)
-        response = generate_content(prompt)
+        response = gemini_generate(prompt)
         DocumentProcessor.__save_response(response)
 
     @staticmethod
