@@ -16,11 +16,16 @@
 ---
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge\&logo=python\&logoColor=white)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.136-009688?style=for-the-badge\&logo=fastapi\&logoColor=white)](https://fastapi.tiangolo.com/)
-[![ChromaDB](https://img.shields.io/badge/ChromaDB-0.4.22-FF6B35?style=for-the-badge\&logo=databricks\&logoColor=white)](https://www.trychroma.com/)
-[![Ollama](https://img.shields.io/badge/Ollama-Llama_3.2-black?style=for-the-badge\&logo=ollama\&logoColor=white)](https://ollama.ai/)
-[![Gemini](https://img.shields.io/badge/Google_Gemini-2.5_Flash-4285F4?style=for-the-badge\&logo=google\&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.136.0-009688?style=for-the-badge\&logo=fastapi\&logoColor=white)](https://fastapi.tiangolo.com/)
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-1.5.8-FF6B35?style=for-the-badge)](https://www.trychroma.com/)
+[![Ollama](https://img.shields.io/badge/Ollama-0.6.1-black?style=for-the-badge)](https://ollama.ai/)
+[![Transformers](https://img.shields.io/badge/Transformers-4.57.6-FFCC00?style=for-the-badge)](https://huggingface.co/docs/transformers/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.11.0-EE4C2C?style=for-the-badge\&logo=pytorch\&logoColor=white)](https://pytorch.org/)
+[![LangChain Core](https://img.shields.io/badge/LangChain_Core-1.3.0-1C3C3C?style=for-the-badge)](https://python.langchain.com/)
+[![Google Gemini](https://img.shields.io/badge/Gemini-API_\(google--genai_1.73.1\)-4285F4?style=for-the-badge\&logo=google\&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.56.0-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
 
 </div>
 
