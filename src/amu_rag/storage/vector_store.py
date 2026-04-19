@@ -6,18 +6,38 @@ from chromadb.config import Settings
 
 from ..config import CHROMA_PERSISTENT_DIR, CHROME_COLLECTION_NAME
 
+
 class VectorStore:
-    """Wrapper for ChromaDB vector database operations"""
-
+    """Singleton wrapper for ChromaDB vector database operations."""
+    
+    _instance = None
+    _initialized = False
+    
+    def __new__(cls):
+        """Override __new__ to control instance creation."""
+        if cls._instance is None:
+            cls._instance = super(VectorStore, cls).__new__(cls)
+        return cls._instance
+    
     def __init__(self):
-        """Initializes the ChromaDB client and collection"""
-
+        """Initializes the ChromaDB client and collection (only once)."""
+        if not VectorStore._initialized:
+            self._initialize()
+            VectorStore._initialized = True
+    
+    def _initialize(self):
+        """Actual initialization logic - runs only once."""
         # Create persistent client
-        self.client = chromadb.PersistentClient(path=str(CHROMA_PERSISTENT_DIR), settings=Settings(anonymized_telemetry=False))
+        self.client = chromadb.PersistentClient(
+            path=str(CHROMA_PERSISTENT_DIR), 
+            settings=Settings(anonymized_telemetry=False)
+        )
 
         # Define embedding function
         # Local embedding model
-        self.embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
+        self.embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
+            model_name="all-MiniLM-L6-v2"
+        )
 
         # Create or get collection
         self.collection = self.client.get_or_create_collection(
@@ -37,7 +57,6 @@ class VectorStore:
         Returns:
             None
         """
-        
         if not documents:
             return
         
@@ -49,6 +68,7 @@ class VectorStore:
     
     def search(self, query: str, n_results: int = 5, where_filter: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """Searches the vector store for relevant documents based on the query and optional filters
+        
         Args:
             query (str): The search query to find relevant documents
             n_results (int, optional): The number of top results to return (default is 5)
@@ -57,13 +77,11 @@ class VectorStore:
         Returns:
             List[Dict[str, Any]]: A list of dictionaries containing the relevant documents and their metadata
         """
-        
         results = self.collection.query(
             query_texts=[query],
             n_results=n_results,
             where=where_filter
         )
-        
         return results
     
     def get_collection_info(self) -> Dict[str, Any]:
@@ -72,18 +90,15 @@ class VectorStore:
         Returns:
             Dict[str, Any]: A dictionary containing information about the collection, such as number of documents and metadata
         """
-        
         info = {
             "name": self.collection.name,
             "count": self.collection.count(),
             "metadata": self.collection.metadata
         }
-
         return info
 
     def delete_collection(self) -> None:
         """Deletes the entire collection from the vector store (use with caution)"""
-        
         self.client.delete_collection(name=CHROME_COLLECTION_NAME)
     
     def reset(self) -> None:
@@ -98,3 +113,15 @@ class VectorStore:
             embedding_function=self.embedding_fn,
             metadata={"hnsw:space": "cosine"}
         )
+    
+    @classmethod
+    def reset_instance(cls):
+        """Reset the singleton instance (useful for testing)."""
+        cls._instance = None
+        cls._initialized = False
+
+
+# Convenience function to get the singleton instance
+def get_vector_store() -> VectorStore:
+    """Get the singleton VectorStore instance."""
+    return VectorStore()
