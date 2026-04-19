@@ -31,3 +31,4 @@ pandas
 # Utilities
 tiktoken
 psutil
+streamlit
