@@ -18,6 +18,10 @@ GEMINI_TOP_P = float(os.getenv("GEMINI_TOP_P", "0.1"))
 GEMINI_TOP_K = int(os.getenv("GEMINI_TOP_K", "10"))
 GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "8192"))
 
+# Validation
+if not GEMINI_API_KEY:
+    raise ValueError("GEMINI_API_KEY not found in .env file. Please set it to your Gemini API key.")
+
 # Ollama Configuration
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2")
@@ -38,9 +42,8 @@ OLLAMA_RAG_CONFIG = {
     "stop": ["\n\n\n"]
 }
 
-# Validation
-if not GEMINI_API_KEY:
-    raise ValueError("GEMINI_API_KEY not found in .env file. Please set it to your Gemini API key.")
+# Vector Database (ChromaDB) Configuration
+CHROME_COLLECTION_NAME = "amu_rag_docs"
 
 # Data directory
 DATA_DIR = PROJECT_ROOT / "data"
@@ -53,6 +56,9 @@ RAW_DATA_PDF_DIR = RAW_DATA_DIR / "pdf"
 
 # Processed data directory
 PROCESSED_DATA_DIR = DATA_DIR / "processed"
+
+# Vector Database (ChromaDB) directory
+CHROMA_PERSISTENT_DIR = DATA_DIR / "chroma_db"
 
 # Create necessary directories if they don't exist
 for dir in [DATA_DIR, RAW_DATA_DIR, RAW_DATA_IMAGE_DIR, RAW_DATA_TEXT_DIR, RAW_DATA_PDF_DIR, PROCESSED_DATA_DIR]:
