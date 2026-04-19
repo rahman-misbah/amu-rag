@@ -1,32 +1,32 @@
 # Core Web Framework
-fastapi>=0.136.0
-uvicorn[standard]==0.24.0
+fastapi
+uvicorn[standard]
 python-multipart
 python-dotenv
 
 # LLM Client
-google-genai>=1.73.1
+google-genai
 
 # Vector DB
-chromadb==0.4.22
+chromadb
 
 # LangChain ecosystem (compatible versions)
-langchain==0.2.0
-langchain-community==0.2.0
-langchain-chroma>=0.2.0
-langchain-ollama==0.1.0
+langchain
+langchain-community
+langchain-chroma
+langchain-ollama
 
 # Embeddings
-sentence-transformers==2.2.2
+sentence-transformers
 
 # Document Processing
-pdf2image>=1.17.0
-unstructured==0.10.30
+pdf2image
+unstructured
 beautifulsoup4
 
 # Data Processing
-numpy==1.24.3
-pandas==2.0.3
+numpy
+pandas
 
 # Utilities
 tiktoken

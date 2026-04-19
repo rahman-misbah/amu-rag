@@ -10,7 +10,7 @@ class ResponseParser:
 
         response_dict = {
             "metadata": json.loads(processed_response[0].strip()),
-            "summary": processed_response[1].strip()
+            "content": processed_response[1].strip()
         }
         
         return response_dict
