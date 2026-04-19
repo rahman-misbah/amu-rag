@@ -1,4 +1,5 @@
 from pathlib import Path
+from datetime import datetime
 
 PROMPTS_DIR = Path(__file__).parent
 
@@ -20,3 +21,4 @@ def load_prompt(file_name: str) -> str:
 
 IMAGE_PROMPT = load_prompt("image_prompt.txt")
 TEXT_PROMPT = load_prompt("text_prompt.txt")
+FILTER_EXTRACTION_PROMPT = load_prompt("filter_extraction_prompt.txt")
