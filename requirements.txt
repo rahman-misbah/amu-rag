@@ -1,34 +1,20 @@
 # Core Web Framework
 fastapi
-uvicorn[standard]
-python-multipart
-python-dotenv
 
-# LLM Client
-google-genai
+# Frontend
+streamlit
 
-# Vector DB
+# Vector Database
 chromadb
 
-# LangChain ecosystem (compatible versions)
-langchain
-langchain-community
-langchain-chroma
-langchain-ollama
-
-# Embeddings
+# Embeddings (required by chromadb)
 sentence-transformers
 
-# Document Processing
+# PDF Processing
 pdf2image
-unstructured
-beautifulsoup4
 
-# Data Processing
-numpy
-pandas
+# Environment Variables
+python-dotenv
 
-# Utilities
-tiktoken
-psutil
-streamlit
+# Gemini API
+google-genai
