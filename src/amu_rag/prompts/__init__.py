@@ -22,3 +22,4 @@ def load_prompt(file_name: str) -> str:
 IMAGE_PROMPT = load_prompt("image_prompt.txt")
 TEXT_PROMPT = load_prompt("text_prompt.txt")
 FILTER_EXTRACTION_PROMPT = load_prompt("filter_extraction_prompt.txt")
+INFERENCE_PROMPT = load_prompt("inference_prompt.txt")
