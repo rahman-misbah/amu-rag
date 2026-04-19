@@ -26,11 +26,11 @@ if not GEMINI_API_KEY:
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2")
 OLLAMA_ROUTER_CONFIG = {
-    "temperature": 0.2,
-    "top_k": 20,
-    "top_p": 0.8,
+    "temperature": 0.0,
+    "top_k": 1,
+    "top_p": 1.0,
     "num_predict": 300,
-    "repeat_penalty": 1.1,
+    "repeat_penalty": 1.0,
     "seed": 42
 }
 OLLAMA_RAG_CONFIG = {
