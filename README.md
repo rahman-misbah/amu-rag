@@ -269,6 +269,6 @@ MIT License
 
 <div align="center">
 
-Built for Aligarh Muslim University
+Built for Aligarh Muslim University with love
 
 </div>
