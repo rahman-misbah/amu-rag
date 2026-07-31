@@ -25,6 +25,10 @@
 [![Google Gemini](https://img.shields.io/badge/Gemini-API_\(google--genai_1.73.1\)-4285F4?style=for-the-badge\&logo=google\&logoColor=white)](https://deepmind.google/technologies/gemini/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.56.0-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Hackathon Winner](https://img.shields.io/badge/Vercera_5.0-🥇_First_Prize-gold?style=for-the-badge)](#-award)
+[![RAG](https://img.shields.io/badge/RAG-Retrieval_Augmented_Generation-blueviolet?style=for-the-badge)
+](#)
+[![LLM](https://img.shields.io/badge/LLM-Gemini_+_Llama-orange?style=for-the-badge)](#)
 
 
 </div>
@@ -48,6 +52,23 @@ It focuses on transforming **raw, messy documents** (PDFs, images, notices) into
 
 ---
 
+# 🏆 Award
+
+<div align="center">
+
+## 🥇 First Prize — Vercera 5.0 Hackathon
+
+AMU-RAG was awarded **First Prize** at **Vercera 5.0**, a national-level hackathon organized by **AMU RoboClub**, for building an AI-powered Retrieval-Augmented Generation (RAG) assistant tailored for Aligarh Muslim University.
+
+<img src="vercera5-first-prize.jpg" alt="Team AMU-RAG winning First Prize at Vercera 5.0" width="850"/>
+
+**🏆 Achievement:** First Prize (₹10,000)
+
+</div>
+
+This recognition highlights the project's practical impact, technical implementation, and innovative use of Large Language Models to improve access to institutional knowledge.
+
+---
 ## ✨ Core Capabilities
 
 | Capability                 | Description                                          |
@@ -270,5 +291,7 @@ MIT License
 <div align="center">
 
 Built for Aligarh Muslim University
+
+🏆 Winner — Vercera 5.0 Hackathon
 
 </div>
